@@ -20,7 +20,8 @@ export function Home() {
         position: "fixed",
         top: "17px",
         left: "55px"
-      }}>typescript</b>
+      }}
+      onClick={() => navigate("/")}>typescript</b>
       <img src="/Typescript_logo_2020.svg.png" alt="ts" style={{
         width: "25px",
         position: "fixed",
@@ -71,6 +72,7 @@ export function Home() {
         }}
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
+        onClick={() => navigate("/pages/use")}
       >
         Get Started
       </button>
