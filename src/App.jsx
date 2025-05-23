@@ -5,6 +5,26 @@ export function Home() {
 
   return (
     <>
+    <section style={{
+      position: "fixed",
+      top: "0px",
+      left: "0px",
+      backgroundColor: "#242424",
+      width: "100%",
+      height: "60px"
+    }}>
+      <b class="typescript" style={{
+        position: "fixed",
+        top: "16px",
+        left: "55px"
+      }}>typescript</b>
+      <img src="/Typescript_logo_2020.svg.png" alt="ts" style={{
+        width: "30px",
+        position: "fixed",
+        left: "15px",
+        top: "13px"
+      }}/>
+    </section>
     <div style={{
         position: "fixed",
         top: "300px",

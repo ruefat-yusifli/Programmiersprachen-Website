@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #151515;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -130,4 +130,14 @@ button:focus-visible {
   transform: scale(1.05);
   cursor: pointer;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.typescript {
+  color: white;
+  transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.3s ease;
+}
+
+.typescript:hover {
+  color: rgb(66, 154, 255);
+  cursor: pointer;
 }
