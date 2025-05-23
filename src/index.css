@@ -141,3 +141,12 @@ button:focus-visible {
   color: rgb(66, 154, 255);
   cursor: pointer;
 }
+
+.use {
+  color: white;
+  transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.3s ease;
+}
+.use:hover {
+  color: rgb(66, 154, 255);
+  cursor: pointer;
+}

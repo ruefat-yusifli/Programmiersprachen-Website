@@ -1,7 +1,10 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 
 export function Home() {
   const [hover, setHover] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <>
@@ -24,6 +27,12 @@ export function Home() {
         left: "20px",
         top: "17px"
       }}/>
+      <b onClick={() => navigate("/pages/use")} style={{
+        cursor: "pointer",
+        position: "fixed",
+        top: "17px",
+        left: "150px"
+      }} className="use">use</b>
     </section>
     <div style={{
         position: "fixed",
