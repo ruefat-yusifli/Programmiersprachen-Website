@@ -11,6 +11,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -148,5 +149,63 @@ button:focus-visible {
 }
 .use:hover {
   color: rgb(66, 154, 255);
+  cursor: pointer;
+}
+
+.intro {
+  transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.3s ease;
+}
+
+.intro:hover {
+  color: rgb(66, 154, 255);
+  background-color: #292929;
+}
+
+li {
+  color: white;
+  font-size: 1em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.why {
+  color: white;
+  transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.3s ease;
+}
+
+.why:hover {
+  color: rgb(66, 154, 255);
+  cursor: pointer;
+}
+
+.whyuse {
+  transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.3s ease;
+  cursor: pointer;
+}
+
+.whyuse:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.animated-box {
+  background-color: rgba(26, 26, 26, 0.87);
+  padding: 24px;
+  width: 100%;
+  max-width: 600px;
+  margin: 30px auto;
+  color: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  font-size: 16px;
+  transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1),
+              box-shadow 0.3s ease;
+}
+
+.animated-box:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
   cursor: pointer;
 }

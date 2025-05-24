@@ -19,7 +19,8 @@ export function Home() {
       <b className="typescript" style={{
         position: "fixed",
         top: "17px",
-        left: "55px"
+        left: "55px",
+        color: "rgb(66, 154, 255)"
       }}
       onClick={() => navigate("/")}>typescript</b>
       <img src="/Typescript_logo_2020.svg.png" alt="ts" style={{
@@ -33,7 +34,7 @@ export function Home() {
         position: "fixed",
         top: "17px",
         left: "150px"
-      }} className="use">use</b>
+      }} className="use">Docs</b>
     </section>
     <div style={{
         position: "fixed",
