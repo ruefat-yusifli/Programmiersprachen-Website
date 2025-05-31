@@ -1,10 +1,7 @@
 # Setup
 
-1. `npm create vite@latest typescript -- --template react`
-2. `cd typescript`
-3. `npm install --save-dev parcel`
-4. `npm install react-syntax-highlighter`
-5. `npm install react-router-dom`
+1. `git clone https://github.com/Zorilas/Typescript-Website/`
+2. `npm install`
 
 # Running
 `npm run dev`
