@@ -4,9 +4,9 @@ Dies ist ein Informatikprojekt, welches mit **React** und **TypeScript** umgeset
 
 ## Technologien
 
-- **React** – Komponentenbasierte UI-Bibliothek
-- **TypeScript** – Statische Typisierung für besseren Code
-- **Vite** – Schnelles Build-Tool für moderne Frontend-Projekte
+- **React**
+- **TypeScript**
+- **Vite** 
 
 ## Projektstruktur
 
