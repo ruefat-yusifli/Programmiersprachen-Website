@@ -1,4 +1,4 @@
-# TypeScript Website – Informatikprojekt
+# Programmierpsrachen Website – Informatikprojekt
 
 Dies ist ein Informatikprojekt, welches mit **React** und **TypeScript** umgesetzt wurde.
 
