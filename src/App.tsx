@@ -1,61 +1,95 @@
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import { useState, useEffect, useRef } from "react";
 
 export function Home() {
   const [hover, setHover] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
   const navigate = useNavigate();
 
   return (
     <>
-    <section style={{
-      position: "fixed",
-      top: "0px",
-      left: "0px",
-      backgroundColor: "#242424",
-      width: "100%",
-      height: "60px"
-    }}>
-      <b className="typescript" style={{
-        position: "fixed",
-        top: "17px",
-        left: "55px",
-        color: "rgb(66, 154, 255)"
-      }}
-      onClick={() => navigate("/")}>typescript</b>
-      <img src="/Typescript_logo_2020.svg.png" alt="ts" style={{
-        width: "25px",
-        position: "fixed",
-        left: "20px",
-        top: "17px"
-      }}/>
-      <b onClick={() => navigate("/pages/use")} style={{
-        cursor: "pointer",
-        position: "fixed",
-        top: "17px",
-        left: "150px"
-      }} className="use">Docs</b>
-    </section>
-    <div style={{
-        position: "fixed",
-        top: "300px",
-        left: "700px",
-        color: "rgb(255, 255, 255)",
-      }}>
-        <p style={{
+      <section
+        style={{
           position: "fixed",
-          top: "170px",
-          left: "810px",
-          fontSize: "50px",
-          fontWeight: "bold"
-        }}>Typescript</p>
-        <p style={{
+          top: "0px",
+          left: "0px",
+          backgroundColor: "#242424",
+          width: "100%",
+          height: "60px",
+          zIndex: 10,
+        }}
+      >
+        <b
+          className="typescript"
+          style={{
+            position: "fixed",
+            top: "17px",
+            left: "35px",
+            color: "rgb(66, 154, 255)",
+            cursor: "pointer",
+          }}
+          onClick={() => navigate("/")}
+        >
+          Home
+        </b>
+
+        <div
+          style={{
+            position: "fixed",
+            top: "17px",
+            left: "110px",
+            userSelect: "none",
+            color: "white",
+          }}
+          onMouseEnter={() => setDropdownOpen(true)}
+          onMouseLeave={() => setDropdownOpen(false)}
+        >
+          <b style={{ cursor: "pointer" }} className="sprachen">Sprachen ▾</b>
+          <div className={`dropdown ${dropdownOpen ? "open" : ""}`}>
+            <div className="dropdown-item" onClick={() => navigate("/pages/typescript")}>
+              TypeScript
+            </div>
+            <div className="dropdown-item" onClick={() => navigate("/pages/cpp")}>
+              C++
+            </div>
+            <div className="dropdown-item" onClick={() => navigate("pages/assembly")}>
+              Assembly
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div
+        style={{
           position: "fixed",
           top: "300px",
-          left: "600px",
-          fontSize: "25px"
-        }}>Typescript ist eine auf JavaScript basierende Programmiersprache</p>
+          left: "700px",
+          color: "white",
+        }}
+      >
+        <p
+          style={{
+            position: "fixed",
+            top: "170px",
+            left: "855px",
+            fontSize: "50px",
+            fontWeight: "bold",
+          }}
+        >
+          Home
+        </p>
+        <p
+          style={{
+            position: "fixed",
+            top: "300px",
+            left: "355px",
+            fontSize: "25px",
+          }}
+        >
+          Hier findest du Übersichten über verschiedene Programmiersprachen wie z.B. Typescript, Assembly oder auch C++
+        </p>
       </div>
+
       <button
         style={{
           color: hover ? "black" : "rgb(66, 154, 255)",
@@ -75,54 +109,33 @@ export function Home() {
         onMouseLeave={() => setHover(false)}
         onClick={() => navigate("/pages/use")}
       >
-        Get Started
+        Next Page
       </button>
-      <section className="box">
-        <h1 style={{
-          fontSize: "25px",
-          position: "relative",
-          top: "-10px",
-          left: "25px"
-        }}>Typensicherheit</h1>
-        <p style={{
-          fontSize: "13px",
-          position: "relative",
-          top: "-10px",
-          left: "5px"
-        }}>Mit statischer Typisierung musst du dir nie wieder Sorgen machen über Fehler durch Tippfehler, falsches Zugreifen auf undefined-Werte oder das Übergeben eines falschen Typs an eine Funktion.
 
-TypeScript erkennt solche Probleme schon beim Schreiben deines Codes</p>
+      <section className="box">
+        <h1 style={{ fontSize: "25px", marginLeft: "65px" }}>Typescript</h1>
+        <p style={{ fontSize: "12px", margin: "5px 10px" }}>
+          Typescript ist eine Erweiterung von Javascript und bietet statische Typisierung, was die
+          Entwicklung von großen und komplexen Anwendungen erleichtert. Es ist eine Open-Source-Sprache,
+          die von Microsoft entwickelt wird und auf JavaScript basiert.
+        </p>
       </section>
+
       <section className="box2">
-        <h1 style={{
-          fontSize: "25px",
-          position: "relative",
-          top: "-10px",
-          left: "50px"
-        }}>Frameworks</h1>
-        <p style={{
-          fontSize: "13px",
-          position: "relative",
-          top: "-10px",
-          left: "15px"
-        }}>TypeScript wird aktiv von Microsoft entwickelt und ist mittlerweile ein industrieller Standard. Nahezu alle modernen Web-Frameworks wie React, Angular, Vue, Next.js oder Svelte bieten eine native und umfassende Integration von TypeScript</p>
+        <h1 style={{ fontSize: "25px", marginLeft: "95px" }}>C++</h1>
+        <p style={{ fontSize: "13px", margin: "5px 15px" }}>
+          C++ ist eine leistungsstarke, objektorientierte Programmiersprache, die für System- und Anwendungsentwicklung
+          verwendet wird.
+        </p>
       </section>
 
       <section className="box3">
-        <h1 style={{
-          fontSize: "25px",
-          position: "relative",
-          top: "-10px",
-          left: "50px"
-        }}>Modularität</h1>
-        <p style={{
-          fontSize: "11px",
-          position: "relative",
-          top: "-10px",
-          left: "5px"
-        }}>TypeScript erweitert JavaScript um moderne Features wie Klassen, Module, asynchrone Programmierung und Datenmodellierung, die eine strukturierte, wartbare und gut organisierte Entwicklung ermöglichen und dadurch die Effizienz und Zusammenarbeit in Entwicklerteams deutlich verbessern</p>
+        <h1 style={{ fontSize: "25px", marginLeft: "50px" }}>Assembly</h1>
+        <p style={{ fontSize: "13px", margin: "5px 15px" }}>
+          Assembly ist eine Low-Level-Programmiersprache, die direkt auf die Hardware eines Computers zugreift.
+          Sie wird oft für Systemprogrammierung und in eingebetteten Systemen verwendet.
+        </p>
       </section>
-      
     </>
   );
 }

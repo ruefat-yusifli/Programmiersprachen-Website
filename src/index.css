@@ -209,3 +209,50 @@ li {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
   cursor: pointer;
 }
+
+.dropdown-wrapper {
+  position: fixed;
+  top: 17px;
+  left: 110px;
+  z-index: 100;
+}
+
+.dropdown {
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  min-width: 160px;
+  background: rgba(30, 30, 30, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.dropdown.open {
+  pointer-events: auto;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.dropdown-item {
+  padding: 12px 16px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.sprachen {
+  transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.3s ease;
+}
+.sprachen:hover {
+  color: rgb(66, 154, 255);
+}
