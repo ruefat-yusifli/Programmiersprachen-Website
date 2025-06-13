@@ -1,3 +1,12 @@
+/**
+ * Main entry point for the React application.
+ * 
+ * - Imports global styles and required dependencies.
+ * - Sets up React Router with routes for Home, TypeScript, C++, and Assembly pages.
+ * - Renders the application inside a StrictMode wrapper for highlighting potential problems.
+ * 
+ * @file Main application bootstrap and routing configuration.
+ */
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import "./index.css"

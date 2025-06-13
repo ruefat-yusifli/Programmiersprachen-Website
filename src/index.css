@@ -1,3 +1,30 @@
+/*
+  index.css
+
+  Global Styles:
+  - :root: Sets base font, color scheme, background, and rendering optimizations.
+  - a: Styles links with color and hover effects.
+  - body: Resets margin, centers content, sets min width/height.
+  - h1: Large heading style.
+  - button: Rounded, styled buttons with hover/focus effects.
+  - Responsive: Adjusts colors and backgrounds for light mode.
+
+  Custom Components:
+  - .codeBlockLines: Fixed position code block styling.
+  - .box, .box2, .box3: Fixed position, styled boxes with hover scaling and shadow.
+  - .typescript, .use, .intro, .why: Text color and hover transitions for interactive elements.
+  - .whyuse: Interactive box with scaling and shadow on hover.
+  - .animated-box: Centered, animated content box with shadow and scaling on hover.
+  - .dropdown-wrapper: Fixed position dropdown container.
+  - .dropdown: Animated dropdown menu with blur and shadow.
+  - .dropdown.open: Visible state for dropdown.
+  - .dropdown-item: Dropdown menu items with hover background.
+  - .sprachen: Transition for language-related elements.
+
+  General:
+  - li: List item styling for color and font.
+  - All interactive elements use smooth transitions for transform, color, and shadow.
+*/
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -252,7 +279,4 @@ li {
 
 .sprachen {
   transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.3s ease;
-}
-.sprachen:hover {
-  color: rgb(66, 154, 255);
 }

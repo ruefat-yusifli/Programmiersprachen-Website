@@ -1,3 +1,10 @@
+/**
+ * React component that renders the C++ page.
+ *
+ * Displays a heading and a paragraph with content related to C++.
+ *
+ * @returns {JSX.Element} The rendered C++ page content.
+ */
 export function Cpp() {
     return (
         <>

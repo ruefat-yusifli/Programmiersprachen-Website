@@ -1,6 +1,16 @@
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 
+/**
+ * Home component renders the main landing page with a fixed navigation bar,
+ * a dropdown menu for selecting programming languages, and informational sections
+ * about TypeScript, C++, and Assembly. It also includes a button to navigate to the
+ * TypeScript page. The component uses React state to handle hover effects and dropdown
+ * visibility, and utilizes React Router's navigation for page transitions.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered Home page component.
+ */
 export function Home() {
   const [hover, setHover] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -107,7 +117,7 @@ export function Home() {
         }}
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
-        onClick={() => navigate("/pages/use")}
+        onClick={() => navigate("/pages/typescript")}
       >
         Next Page
       </button>
