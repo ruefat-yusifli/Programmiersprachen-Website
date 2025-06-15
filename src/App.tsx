@@ -92,7 +92,7 @@ export function Home() {
           style={{
             position: "fixed",
             top: "300px",
-            left: "355px",
+            left: "335px",
             fontSize: "25px",
           }}
         >
