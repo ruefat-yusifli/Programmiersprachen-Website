@@ -1,8 +1,6 @@
 # Setup
 
-1. `npm create vite@latest typescript -- --template react`
-2. `cd typescript`
-3. `npm install --save-dev parcel`
+1. `git clone https://github.com/ruefat-yusifli/Programmiersprachen-Website`
+2. `npm install`
 
-# running
-`npm run dev`
+To run it locally, use `npm run dev`
