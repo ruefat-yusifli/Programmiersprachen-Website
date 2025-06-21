@@ -280,3 +280,20 @@ li {
 .sprachen {
   transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.3s ease;
 }
+
+.github {
+  pointer-events: auto;   
+  transition: none;       
+  color: inherit;        
+  cursor: pointer;
+  position: relative;
+  left: 1855px;
+  top: 19px;
+}
+
+.github:hover {
+  color: inherit;         
+  cursor: pointer;      
+  filter: none;           
+  opacity: 1;           
+}

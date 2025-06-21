@@ -73,6 +73,9 @@ export function Ts() {
                 >
                     Last Page
                 </button> {/*This Button navigates to the last page*/}
+                <div className="Content">
+                    <h1 className="#"></h1>
+                </div>
             </div>
         </>
     );
