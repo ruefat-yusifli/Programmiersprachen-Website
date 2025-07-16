@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { createnav } from "../components/nav-bar";
 
 /**
  * Renders the Typescript page with navigation buttons.
@@ -19,6 +20,7 @@ export function Ts() {
     const navigate = useNavigate();
     return (
         <>
+            {createnav()}
             <div>
                 <h1 style={{
                     position: "relative",
@@ -73,9 +75,31 @@ export function Ts() {
                 >
                     Last Page
                 </button> {/*This Button navigates to the last page*/}
-                <div className="Content">
-                    
-                </div>
+                <div className="Content" style={{
+                        color: "white",
+                        padding: "0px",
+                        fontSize: "20px",
+                        lineHeight: "1.6",
+                        maxWidth: "800px",
+                        margin: "0 auto",
+                        textAlign: "left",
+                        position: "relative",
+                        top: "-100px",
+                        left: "550px",
+}}>
+    <h2 style={{ color: "rgb(66, 154, 255)", fontSize: "32px", marginBottom: "20px" }}>Was ist TypeScript?</h2>
+    <p>
+        TypeScript ist eine von Microsoft entwickelte Programmiersprache, die auf JavaScript basiert, aber zusätzliche Funktionen bietet – insbesondere statische Typisierung.
+        Durch TypeScript kannst du Fehler bereits beim Schreiben deines Codes erkennen, statt erst zur Laufzeit.
+    </p>
+    <h3 style={{ color: "rgb(255, 66, 129)", marginTop: "30px" }}>Vorteile von TypeScript:</h3>
+    <ul style={{ marginLeft: "20px" }}>
+        <li>🛡️ <strong>Typensicherheit:</strong> Vermeide viele gängige Laufzeitfehler durch Typüberprüfung beim Kompilieren.</li>
+        <li>💡 <strong>IntelliSense:</strong> Bessere Autovervollständigung und Tooling in IDEs wie VS Code.</li>
+        <li>📦 <strong>Große Community:</strong> Weit verbreitet, insbesondere bei größeren Projekten (z. B. Angular, React, etc.).</li>
+        <li>🔄 <strong>Kompatibel mit JavaScript:</strong> Jeder JS-Code ist auch gültiger TS-Code – du kannst also schrittweise migrieren.</li>
+    </ul>
+</div>
             </div>
         </>
     );
