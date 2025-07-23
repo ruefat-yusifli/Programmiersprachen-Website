@@ -52,7 +52,7 @@ export function createnav() {
             <div className="dropdown-item" onClick={() => navigate("/pages/cpp")}>
               C++
             </div>
-            <div className="dropdown-item" onClick={() => navigate("pages/assembly")}>
+            <div className="dropdown-item" onClick={() => navigate("/pages/assembly")}>
               Assembly
             </div>
           </div>
